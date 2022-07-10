@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Indo ao fundo da máquina</title>
+<script type="text/javascript">
+
+var a, b;
+
+alert("Seja Bem Vindo!");
+
+a=a+1;
+
+alert("Número de vezes que você esteve aqui:"); 
+alert(a);
+
+</script>
+<style type="text/css">
+body,td,th {
+	font-family: "Segoe UI", "Segoe UI Light", "Segoe Script", "Segoe UI Symbol", "Book Antiqua";
+}
+</style>
+</head>
+
+<body bgcolor="#00FFCC" bgproperties="#FFFFCC">
+<h1 align="center">
+Indo ao fundo da máquina- Dia 18/07/2014
+</h1>
+
+<hr color='orange' size='3'>
+
+<br /><br />
+<p align="center"> <a href="http://wiki.osdev.org/X86-64"><img src="../IMG/processador.jpg" height="150" alt="Processador" onmouseup="Processador" /></a></p>
+<br />
+<p align="center"><a href="http://wiki.osdev.org/X86-64" target="new">Processador com Arquitetura x86-x64</a>
+ </p>
+<FONT size="5" face="arial" color="gray">
+<p align="center">
+Ao contrário do que acontece nas linguagens de alto nível, existe (até certo ponto) uma correspondência de 1 para 1 entre a linguagem de montagem simples e a linguagem de máquina.
+<p align="center"> Por isso a tradução do código de montagem em código de máquina <strong>não é chamada compilação, mas montagem</strong>. Consegue-se transformar a linguagem de montagem em linguagem de máquina recorrendo a um montador (também chamado assembler, originado do termo assemblé em francês), e a transformação inversa faz-se recorrendo a um desmontador (também chamado disassembler).
+<p align="center"> Cada arquitetura de computador tem a sua própria linguagem de máquina e, portanto, a sua própria linguagem de montagem. Essas linguagens de montagem diferem no número e tipo de operações que suportam. Também têm diferentes tamanhos e números de registradores, e diferentes representações dos tipos de dados armazenados. Enquanto todos os computadores de utilização genérica são capazes de desempenhar essencialmente as mesmas funções, o modo como o fazem é diferente.
+  
+  Além disso, podem existir conjuntos múltiplos de mnemónicas, ou sintaxes de linguagem de montagem, para um único conjunto de instruções. Nestes casos, o conjunto mais popular é aquele que é utilizado pelo fabricante na sua documentação.
+<p align="center">No mercado de PCs, dominado por processadores Intel e AMD, atualmente existem duas arquiteturas. Primeiro a IA32 (genericamente chamada de i386, x86 ou x86-32), criada pela Intel em 1985 e primeiramente utilizada pelo processadores i386 e segundo a IA32-EM64T (ou IA32-AMD64 ) criada em 2002 pela AMD (mas também utilizada pela Intel hoje). O IA32 utiliza o grupo de instruções chamado x86, e o IA32-EM64T utiliza o grupo chamado x86-64. As duas arquiteturas usam números diferentes de registradores gerais e tamanho. Enquanto os registradores do x86 são 32 bits os da x86-64 são 64 bits.
+<p align="center">
+
+Os registradores de uso geral da arquitetura x86 são:
+</p>
+<p align="center"><br />
+  <strong><em>%EAX - registrador acumulador<br />
+  %EBX - registrador base<br />
+  %ECX - registrador contador<br />
+  %EDX - registrador de dados<br />
+  %ESI - registrador de índice da fonte dos dados<br />
+  %EDI - registrador de índice do destino dos dados<br />
+  %EBP - registrador ponteiro para a moldura de chamada de função<br />
+  %ESP - registrador ponteiro para a pilha de execução<br />
+  </em></strong><br />
+  Os registradores de uso geral da arquitetura x86-64 são:
+</p>
+<p align="center">
+<strong><em>%RAX - registrador valor de retorno<br />
+%RBX - registrador base<br />
+%RCX - registrador contador<br />
+%RDX - registrador de dados<br />
+%RSI - registrador de índice da fonte dos dados<br />
+%RDI - registrador de índice do destino dos dados<br />
+%RBP - registrador ponteiro para a moldura de chamada de função<br />
+%RSP - registrador ponteiro para a pilha de execução<br />
+%R8 - registrador de dados<br />
+%R9 - registrador de dados<br />
+%R10 - registrador ponteiro para a moldura de chamada de função<br />
+%R11 - registrador de linking<br />
+%R12 - registrador de base<br />
+%R13 - registrador de base<br />
+%R14 - registrador de base<br />
+%R15 - registrador de base</em></strong><br />
+</p><p align="center">
+Esses nomes derivam da forma como eram utilizados nas arquiteturas anteriores a IA32 (8086, 80286…), em que cada registrador desempenhava um papel específico. Na arquitetura i386, todos eles são de uso geral, embora eles continuem a poder ser utilizados em seus papéis tradicionais.
+<p align="center">
+A arquitetura IA32 ainda apresenta os registradores de segmento CS, DS, ES, SS, FS e GS, um contador de programa EIP, um registro de sinalizadores EFLAGS, 8 registradores de ponto flutuante e seus sinalizadores associados. Existem também registradores utilizados pelo sistema operacional para controle da execução em modo protegido, bem como outros registradores de uso específico (depuração, controle de desempenho, testes e etc.).
+</p></font>
+
+<p><FONT size="5" face="arial" color="gray">
+  Instruções aritméticas:
+ </font></p>
+<p><FONT size="5" face="arial" color="gray"> Adição:<strong> ADD, ADC, INC, XADD, AAA e DAA;</strong></font></p>
+<p><FONT size="5" face="arial" color="gray"> Subtracção:<strong> SUB, SBB, DEC, AAS e DAS;</strong></font></p>
+<p><FONT size="5" face="arial" color="gray"> Multiplicação: <strong>MUL, IMUL e AAM;</strong></font></p>
+<p><FONT size="5" face="arial" color="gray"> Divisão: <strong>DIV, IDIV e AAD; </strong></FONT></p>
+<p><FONT size="5" face="arial" color="gray"> Ou lógico: <strong>OR e XOR. </strong></FONT></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>  
+<p align="center">
+<img src="../IMG/concorrencia.jpg"  height="170" alt="Duas competidoras" /> </font></p>
+
+</body>
+</html>
